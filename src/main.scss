@@ -1,0 +1,18 @@
+@import './styles/abstract';
+@import './styles/base';
+@import './styles/utilities';
+
+@import './components/heading/heading';
+@import './components/button/button';
+@import './components/nav/nav';
+@import './components/header/header';
+@import './components/card/card';
+@import './components/contentBox/contentBox';
+@import './components/footer/footer.scss';
+@import './components/categoryBox/categoryBox';
+@import './components/cart/cart';
+
+
+@import './pages/home/home';
+@import './pages/shop/shop';
+

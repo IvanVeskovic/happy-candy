@@ -1,0 +1,33 @@
+.header {
+    background: linear-gradient(to right bottom, rgba($c-pink, .7), rgba($c-pink, .7)), url('../../img/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+
+    .row {
+        height: 100%;
+    }
+
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: $c-white;
+    }
+
+    &__heading {
+        font-size: 6.4rem;
+        font-family: $font-sansita;
+        line-height: 6.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-style: italic;
+    }
+}

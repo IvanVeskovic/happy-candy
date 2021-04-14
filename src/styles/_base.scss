@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;   
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: $font-regular;
+    font-size: 1.7rem;
+    color: $c-dark;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .row {
+    max-width: 1200px;
+    margin: 0 auto;
+}

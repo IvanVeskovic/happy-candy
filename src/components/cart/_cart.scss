@@ -1,0 +1,125 @@
+.cart {
+    position: fixed;
+
+    // padding: 3rem;
+    top: 0;
+    right: 0;
+    max-width: 0;
+    background-color: $c-white;
+    height: 100vh;
+    box-shadow: 0px 10px 13px -7px #000000, -10px 0px 18px 1px rgba(0,0,0,0.17);
+    z-index: 300;
+    transition: all .2s ;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        opacity: 0;
+    }
+
+    &--show {
+        max-width: 50rem;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 3rem;
+        color: $c-blue;
+        cursor: pointer;
+
+        &:hover {
+            color: $c-pink;
+        }
+    }
+
+    &__content {
+        margin: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 3rem;
+        text-align: center;
+        font-family: $font-sansita;
+        text-transform: capitalize;
+        margin-bottom: 3rem;
+
+    }
+
+    &__items {
+        margin: 0 3rem;
+
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        padding-bottom: .5rem;
+        
+        &:not(:last-child) {
+            border-bottom: 2px solid $c-blue;
+        }
+
+        &__title {
+            text-transform: capitalize;
+            font-size: 2rem;
+            font-family: $font-sansita;
+            margin-right: 1rem;
+
+        }
+
+        &__img {
+            height: 5rem;
+            width: 5rem;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        &__remove {
+            font-size: 2rem;
+            margin-left: 2rem;
+            color: $c-danger;
+            cursor: pointer;
+            
+        }
+
+        &__input {
+            width: 5rem;
+            padding: .5rem;
+            // background-color: $c-blue;
+            border: 2px solid $c-blue;
+            color: $c-dark;
+            text-align: center;
+            font-weight: 700;
+            font-family: $font-sansita;
+            margin-left: auto;
+
+            &:focus {
+                outline: none;
+            }
+        }   
+
+        &__total {
+            font-weight: 700;
+            font-family: $font-sansita;
+            width: 3rem;
+            text-align: center;
+            margin-left: 1rem;
+        }
+    }
+
+    &__total {
+        font-family: $font-sansita;
+        text-align: right;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+
+        &__price {
+
+        }
+    }
+}

@@ -1,0 +1,44 @@
+
+.category {
+
+    &__box {
+        height: 20rem;
+        width: 20%;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        cursor: pointer;
+    }
+
+    
+    &__box:hover > &__overlay,
+    &__box--active {
+        background: linear-gradient(to right, rgba($c-blue, .5), rgba($c-blue, .5));
+    }
+    
+    &__overlay {
+        background: linear-gradient(to right, rgba($c-pink, .5), rgba($c-pink, .5));
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__overlay--active {
+        background: linear-gradient(to right, rgba($c-blue, .5), rgba($c-blue, .5));
+    }
+    
+    &__title {
+        align-self: flex-end;
+        color: $c-white;
+        font-family: $font-sansita;
+        z-index: 5;
+        position: relative;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        text-shadow: 5px 10px rgba($c-dark, .5);
+    }
+}

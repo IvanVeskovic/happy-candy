@@ -1,0 +1,123 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "bannana",
+            "img": "img/donuts/bannana.png",
+            "price": 2,
+            "type": "donuts"
+        },
+        {
+            "id": 2,
+            "name": "candy donut",
+            "img": "img/donuts/candy_donut.png",
+            "price": 1.5,
+            "type": "donuts"
+        },
+        {
+            "id": 3,
+            "name": "choco hazel",
+            "img": "img/donuts/choco_hazel.png",
+            "price": 3,
+            "type": "donuts"
+        },
+        {
+            "id": 4,
+            "name": "choco peanut",
+            "img": "img/donuts/choco_peanut.png",
+            "price": 2,
+            "type": "donuts"
+        },
+        {
+            "id": 5,
+            "name": "oreo",
+            "img": "img/donuts/oreo.png",
+            "price": 3,
+            "type": "donuts"
+        },
+        {
+            "id": 6,
+            "name": "strawberry",
+            "img": "img/donuts/strawberry.png",
+            "price": 1.5,
+            "type": "donuts"
+        },
+        {
+            "id": 7,
+            "name": "white choco",
+            "img": "img/donuts/white_choco.png",
+            "price": 2,
+            "type": "donuts"
+        },
+        {
+            "id": "c1",
+            "name": "Brownie",
+            "img": "img/cakes/brownie.jpg",
+            "price": 3,
+            "type": "cakes"
+        },
+        {
+            "id": "c2",
+            "name": "Choco Muffin",
+            "img": "img/cakes/choco_muffin.jpg",
+            "price": 2.5,
+            "type": "cakes"
+        },
+        {
+            "id": "c3",
+            "name": "Choco Tricolore",
+            "img": "img/cakes/choco_tricolore.jpg",
+            "price": 3.5,
+            "type": "cakes"
+        },
+        {
+            "id": "c4",
+            "name": "Rum & Choco",
+            "img": "img/cakes/rum_choco.jpg",
+            "price": 3.5,
+            "type": "cakes"
+        },
+        {
+            "id": "c5",
+            "name": "Strawberry Cupcake",
+            "img": "img/cakes/strawberry_cupcake.jpg",
+            "price": 3,
+            "type": "cakes"
+        },
+        {
+            "id": "s1",
+            "name": "Cocos",
+            "img": "img/shakes/cocos.jpg",
+            "price": 2,
+            "type": "shakes"
+        },
+        {
+            "id": "s2",
+            "name": "Menat & Avokado",
+            "img": "img/shakes/menta_avokado.jpg",
+            "price": 2,
+            "type": "shakes"
+        },
+        {
+            "id": "s3",
+            "name": "Menta & Lime",
+            "img": "img/shakes/menta_lime.jpg",
+            "price": 2.5,
+            "type": "shakes"
+        },
+        {
+            "id": "s4",
+            "name": "Strawberry & Cake",
+            "img": "img/shakes/strawberry_cake.jpg",
+            "price": 3,
+            "type": "shakes"
+        },
+        {
+            "id": "s5",
+            "name": "Strawberry",
+            "img": "img/shakes/strawberry.jpg",
+            "price": 2.5,
+            "type": "shakes"
+        }
+    ]
+}

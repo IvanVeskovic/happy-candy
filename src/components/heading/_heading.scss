@@ -1,0 +1,15 @@
+.heading {
+    text-align: center;
+    font-family: $font-sansita;
+    font-size: 4.5rem;
+    margin: 2rem 0;
+
+    &::after {
+        content: '';
+        height: 3px;
+        width: 170px;
+        display: block;
+        background-color: $c-blue;
+        margin: 2rem auto;
+    }
+}

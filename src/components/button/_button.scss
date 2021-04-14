@@ -1,0 +1,38 @@
+.btn {
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    font-size: 2rem;
+    border: none;
+    background: $c-white;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &--main {
+        position: relative;
+        z-index: 1;
+        transition: all .2s ease;
+        
+        &:hover {
+            // transform: translateY(-50%);
+            transform: translateY(-5px);
+        }
+    }
+
+    &--second {
+        background-color: $c-blue;
+        width: 100%;
+        transition: all .2s ease;
+        padding: 1.5rem;
+        color: $c-white;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-top: auto;
+
+        &:hover {
+            background-color: $c-pink;
+        }
+    }
+}

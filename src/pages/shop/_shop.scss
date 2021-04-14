@@ -1,0 +1,22 @@
+.shop {
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 3rem;
+        align-items: center;
+        transition: all .5s;
+    }
+
+    &__category {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transition: all .5s;
+
+    }
+
+    transition: all .5s;
+
+}
