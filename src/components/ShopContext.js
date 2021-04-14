@@ -16,13 +16,13 @@ export const ShopProvider = (props) => {
         setCart(prevValue => prevValue.filter(el => el.id !== id))
     }
 
-    // const handleChangeQuantity = (id, value) => {
-    //     const newObj = cart.find(el => el.id === id);
-    //     const newArr = cart.filter(el => el.id !== id);
-    //     newObj.quantity = value;
+    const handleChangeQuantity = (id, value = 1) => {
+        const newObj = cart.find(el => el.id === id);
+        newObj.quantity = value;
+        const newArr = cart.filter(el => el.id !== id ? el : newObj);
 
-    //     setCart([...cart, newArr]);
-    // }
+        setCart(newArr);
+    }
 
     
     // Run once hen app start
@@ -49,7 +49,7 @@ export const ShopProvider = (props) => {
     }
 
     return(
-        <ShopContext.Provider value={[cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart]}>
+        <ShopContext.Provider value={[cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity]}>
             {props.children}
         </ShopContext.Provider>
     )

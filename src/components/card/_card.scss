@@ -2,9 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid $c-blue;
     position: relative;
     // width: 25rem;
+
+    transition: all .2s;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 10px rgba($c-dark, .4);
+    }
 
     &__title {
         font-family: $font-sansita;
@@ -15,6 +21,7 @@
 
     &__img {
         width: 100%;
+        object-fit: cover;
     }
 
     &__price {

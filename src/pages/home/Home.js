@@ -8,15 +8,16 @@ import shakeSvg from '../../img/shake-svg.svg';
 
 import ContentBox from "../../components/contentBox/ContentBox";
 import { useEffect, useState } from "react";
+import VideoSection from "../../components/videoSection/VideoSection";
 
 const Home = () => {
     const [randomDonuts, setRandomDonuts] = useState([]);
 
     useEffect(() => {
-        const request = fetch(`http://localhost:8000/products`)
-                                .then(res => res.json())
-                                .then(data => setRandomDonuts((data.sort(() => 0.5 - Math.random())).slice(0, 5)))
-                                .catch(err => console.log(err))
+        fetch(`http://localhost:8000/products`)
+            .then(res => res.json())
+            .then(data => setRandomDonuts((data.sort(() => 0.5 - Math.random())).slice(0, 5)))
+            .catch(err => console.log(err))
     },[])
 
     return ( 
@@ -26,10 +27,6 @@ const Home = () => {
 
             <div className="row">
                 <div className="home__wraper">
-                {/* <Card title='Strawberry' img={strawberry} width='22%' />
-                <Card title='Choco Hazl' img={chocoHazl} width='22%' />
-                <Card title='Full Candy Donut' img={candyDonut} width='22%' />
-                <Card title='Oreo' img={oreo} width='22%' /> */}
                 {
                     randomDonuts.map(donut => (
                         <Card title={donut.name} img={donut.img} width='18%' key={donut.id} item={donut} />

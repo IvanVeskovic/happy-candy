@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Card from '../../components/card/Card';
 
 import Heading from '../../components/heading/Heading';
@@ -8,21 +8,17 @@ import donutsProducts from '../../img/donuts.jpg';
 import cakesProducts from '../../img/cakes.jpg';
 import shakesProduct from '../../img/shakes.jpg';
 import CategoryBox from "../../components/categoryBox/CategoryBox";
-import { ShopContext } from "../../components/ShopContext";
 
 const Shop = () => {
         const [list, setList] = useState([]);
         const [filter, setFilter] = useState('all');
 
-        const [text] = useContext(ShopContext);
-
 
         useEffect(() => {
             const getListForShop = async () => {
                 const request = await fetch(`http://localhost:8000/products`)
-                .then(res => res.json())
-                .then(data => setList(data))
-                .catch(err => console.log(err));
+                const data = await request.json();
+                setList(data);
             }
             getListForShop();
         }, []);
@@ -48,7 +44,7 @@ const Shop = () => {
                             list
                             .filter(el => filter === 'all' ? el : el.type === filter)
                             .map(item => (
-                                <Card title={item.name} img={item.img} width='100%' key={item.id} price={item.price} item={item} />
+                                <Card title={item.name} img={item.img} key={item.id} price={item.price} item={item} />
                             ))
                         }
                     </div>

@@ -1,0 +1,18 @@
+.video {
+    height: 50rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    position: relative;
+
+    &__play {
+        // object-fit: cover;
+        display: block;
+        object-fit: fill;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
