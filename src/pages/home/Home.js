@@ -8,7 +8,8 @@ import shakeSvg from '../../img/shake-svg.svg';
 
 import ContentBox from "../../components/contentBox/ContentBox";
 import { useEffect, useState } from "react";
-import VideoSection from "../../components/videoSection/VideoSection";
+import BreakSection from "../../components/breakSection/BreakSection";
+import ListAll from "../../components/listAll/ListAll";
 
 const Home = () => {
     const [randomDonuts, setRandomDonuts] = useState([]);
@@ -29,11 +30,13 @@ const Home = () => {
                 <div className="home__wraper">
                 {
                     randomDonuts.map(donut => (
-                        <Card title={donut.name} img={donut.img} width='18%' key={donut.id} item={donut} />
+                        <Card title={donut.name} img={donut.img} width='18%' key={donut.id} item={donut} price={donut.price} />
                     ))
                 }
                 </div>
             </div>
+
+            <BreakSection />
 
             <Heading title='From us' />
             <div className="row">

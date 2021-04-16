@@ -1,0 +1,25 @@
+.break {
+    height: 20rem;
+    background: linear-gradient(rgba($c-pink, .4), rgba($c-pink, .4)), url('../../img/donuts-banner.jpg');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .row {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        z-index: 3;
+        margin-top: 2rem;
+        position: relative;
+        font-size: 5rem;
+        font-family: $font-sansita;
+        margin-bottom: 2rem;
+        color: $c-dark;
+    }
+}

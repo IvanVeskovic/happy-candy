@@ -24,7 +24,6 @@ export const ShopProvider = (props) => {
         setCart(newArr);
     }
 
-    
     // Run once hen app start
     useEffect(() => {
         getLocalList();

@@ -4,6 +4,7 @@
     align-items: center;
     position: relative;
     // width: 25rem;
+    overflow: hidden;
 
     transition: all .2s;
 
@@ -41,4 +42,25 @@
         top: 0;
         right: 0;
     }
+
+    &__notification {
+        background: linear-gradient(rgba($c-pink, .9), rgba($c-pink, .9));
+        color: $c-white;
+        font-size: 2rem;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-sansita;
+        transition: all .2s;
+        transform: translateY(-100%);
+
+        &--active {
+            transform: translateY(0);
+        }
+    }   
 }

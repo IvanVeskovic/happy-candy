@@ -2,12 +2,19 @@ import { ShopContext } from "../ShopContext";
 
 import { useContext } from "react";
 
-const Button = ({text, className, item}) => {
+const Button = ({text, className, item, handleAddedToCart}) => {
 
     const [cart, setCart, showCart, setShowCart, handleAddToCartUnique] = useContext(ShopContext);
 
+    const handleClick = () => {
+        handleAddedToCart();
+        if(item) {
+            handleAddToCartUnique(item)
+        };
+    }
+
     return ( 
-            <button type='button' className={`btn ${className}`} onClick={() => handleAddToCartUnique(item)}>{text}</button>
+            <button type='button' className={`btn ${className}`} onClick={handleClick}>{text}</button>
      );
 }
  

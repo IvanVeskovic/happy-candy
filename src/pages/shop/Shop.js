@@ -8,6 +8,7 @@ import donutsProducts from '../../img/donuts.jpg';
 import cakesProducts from '../../img/cakes.jpg';
 import shakesProduct from '../../img/shakes.jpg';
 import CategoryBox from "../../components/categoryBox/CategoryBox";
+import ListAll from "../../components/listAll/ListAll";
 
 const Shop = () => {
         const [list, setList] = useState([]);
