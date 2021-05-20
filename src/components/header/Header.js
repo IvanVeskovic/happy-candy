@@ -9,7 +9,7 @@ const Header = () => {
                         Donuts and candy <span className="line-break">always comes handy!</span>
                     </h1>
                     <p className="header__text">Check our store and get some seriously tasteful candies and cakes</p>
-                    <Button text='Shop Now' className='btn--main' bgcolor='blue' />
+                    <Button text='Shop Now' classType='btn--main' bgcolor='blue' path='/shop' />
                 </div>
             </div>
         </header>

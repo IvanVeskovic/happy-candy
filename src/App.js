@@ -8,6 +8,7 @@ import Shop from './pages/shop/Shop';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ShopProvider } from './components/ShopContext';
 import Cart from './components/cart/Cart';
+import Contact from './pages/contact/Contact';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <Route path='/shop'>
               <Shop />
+            </Route>
+            <Route path='/contact'>
+              <Contact />
             </Route>
 
           </Switch>

@@ -6,9 +6,9 @@ const BreakSection = () => {
             <div className="break__overlay"></div>
             <div className="row">
                     <h3 className="break__text">
-                        Lets get in touch!
+                        Let's get in touch!
                     </h3>
-                    <Button text='Contact Us!' className='btn--main' />
+                    <Button text='Contact Us!' classType='btn--main' path='/contact' />
             </div>
         </section>
      );

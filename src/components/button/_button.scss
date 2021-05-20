@@ -6,6 +6,7 @@
     background: $c-white;
     cursor: pointer;
     position: relative;
+    z-index: 3;
 
     &:focus {
         outline: none;
@@ -35,5 +36,9 @@
         &:hover {
             background-color: $c-pink;
         }
+    }
+
+    &__link {
+        width: 100%;
     }
 }

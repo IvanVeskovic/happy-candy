@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react';
+import Button from '../button/Button';
 
 import {ShopContext} from '../ShopContext';
 
@@ -24,7 +25,10 @@ const Cart = () => {
                 <h3 className="cart__title">
                     { cart.length > 0 ? 'it’s one delicious order' : 'What are you waiting?'}
                 </h3>
-                <form className="cart__items" onSubmit={(e) => handleSubmit(e)}>
+                {   
+                    cart.length > 0
+                    &&
+                    <form className="cart__items" onSubmit={(e) => handleSubmit(e)}>
                     {   
                         cart
                         &&
@@ -45,6 +49,12 @@ const Cart = () => {
                     </div>
                     <button type='submit' className='btn btn--second' onSubmit={(e) => handleSubmit(e)}>Submit</button>
                 </form>
+                }
+                {   
+                    cart.length === 0
+                    &&
+                    <Button text='Shop Now' classType='btn--second' path='/shop' />
+                }
            </div>
         </div>
      );

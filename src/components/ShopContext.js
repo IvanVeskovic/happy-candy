@@ -9,7 +9,7 @@ export const ShopProvider = (props) => {
     const handleAddToCartUnique = (item) => {
         if(!cart.some(el => el.id === item.id)){
             setCart(prevValue => [...prevValue, {...item, "quantity" : 1}])
-        }
+        } 
     }
 
     const handleRemoveFromCart = (id) => {

@@ -5,119 +5,587 @@
             "name": "bannana",
             "img": "img/donuts/bannana.png",
             "price": 2,
-            "type": "donuts"
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": 2,
             "name": "candy donut",
             "img": "img/donuts/candy_donut.png",
             "price": 1.5,
-            "type": "donuts"
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": 3,
             "name": "choco hazel",
             "img": "img/donuts/choco_hazel.png",
             "price": 3,
-            "type": "donuts"
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": 4,
             "name": "choco peanut",
             "img": "img/donuts/choco_peanut.png",
             "price": 2,
-            "type": "donuts"
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": 5,
             "name": "oreo",
             "img": "img/donuts/oreo.png",
             "price": 3,
-            "type": "donuts"
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": 6,
             "name": "strawberry",
             "img": "img/donuts/strawberry.png",
             "price": 1.5,
-            "type": "donuts"
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": 7,
             "name": "white choco",
             "img": "img/donuts/white_choco.png",
             "price": 2,
-            "type": "donuts"
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
+        {
+            "id": 8,
+            "name": "blueberry puding",
+            "img": "img/donuts/blueberry_puding.jpg",
+            "price": 2,
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": 9,
+            "name": "candy puding",
+            "img": "img/donuts/candy_puding.jpg",
+            "price": 1.5,
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "dark choco puding",
+            "img": "img/donuts/darkchoco_puding.jpg",
+            "price": 2.5,
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": 11,
+            "name": "pink puding",
+            "img": "img/donuts/pink_puding.jpg",
+            "price": 2,
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": 12,
+            "name": "plazma cream",
+            "img": "img/donuts/plazma_cream.jpg",
+            "price": 2.5,
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": 13,
+            "name": "white pink puding",
+            "img": "img/donuts/white_pink_puding.jpg",
+            "price": 2,
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": 14,
+            "name": "white puding",
+            "img": "img/donuts/white_puding.jpg",
+            "price": 2,
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": 15,
+            "name": "white choco puding",
+            "img": "img/donuts/whitechoco_puding.jpg",
+            "price": 2.5,
+            "type": "donuts",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+
         {
             "id": "c1",
             "name": "Brownie",
             "img": "img/cakes/brownie.jpg",
             "price": 3,
-            "type": "cakes"
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": "c2",
             "name": "Choco Muffin",
             "img": "img/cakes/choco_muffin.jpg",
             "price": 2.5,
-            "type": "cakes"
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": "c3",
             "name": "Choco Tricolore",
             "img": "img/cakes/choco_tricolore.jpg",
             "price": 3.5,
-            "type": "cakes"
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": "c4",
             "name": "Rum & Choco",
             "img": "img/cakes/rum_choco.jpg",
             "price": 3.5,
-            "type": "cakes"
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": "c5",
             "name": "Strawberry Cupcake",
             "img": "img/cakes/strawberry_cupcake.jpg",
             "price": 3,
-            "type": "cakes"
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
+        {
+            "id": "c6",
+            "name": "annanas cherry",
+            "img": "img/cakes/annanas_cherry.jpg",
+            "price": 3,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c7",
+            "name": "blue lagoon",
+            "img": "img/cakes/blue_lagoon.jpg",
+            "price": 3.5,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c8",
+            "name": "caramela cake",
+            "img": "img/cakes/caramela_cake.jpg",
+            "price": 3,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c9",
+            "name": "caramela",
+            "img": "img/cakes/caramela.jpg",
+            "price": 3.5,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c10",
+            "name": "choco cream",
+            "img": "img/cakes/choco_cream.jpg",
+            "price": 4,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c11",
+            "name": "oreo",
+            "img": "img/cakes/oreo.jpg",
+            "price": 4.5,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c12",
+            "name": "raspberry cupcake",
+            "img": "img/cakes/raspberry_cupcake.jpg",
+            "price": 3,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c13",
+            "name": "Strawberry icecream",
+            "img": "img/cakes/strawberry_icecream.jpg",
+            "price": 3.5,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c14",
+            "name": "Strawberry orange",
+            "img": "img/cakes/strawberry_orange.jpg",
+            "price": 4,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "c15",
+            "name": "wedding cake",
+            "img": "img/cakes/wedding_cake.jpg",
+            "price": 5,
+            "type": "cakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+
         {
             "id": "s1",
             "name": "Cocos",
             "img": "img/shakes/cocos.jpg",
             "price": 2,
-            "type": "shakes"
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": "s2",
             "name": "Menat & Avokado",
             "img": "img/shakes/menta_avokado.jpg",
             "price": 2,
-            "type": "shakes"
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": "s3",
             "name": "Menta & Lime",
             "img": "img/shakes/menta_lime.jpg",
             "price": 2.5,
-            "type": "shakes"
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": "s4",
             "name": "Strawberry & Cake",
             "img": "img/shakes/strawberry_cake.jpg",
             "price": 3,
-            "type": "shakes"
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         },
         {
             "id": "s5",
             "name": "Strawberry",
             "img": "img/shakes/strawberry.jpg",
             "price": 2.5,
-            "type": "shakes"
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s6",
+            "name": "blueberry",
+            "img": "img/shakes/blueberry.jpg",
+            "price": 3,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s7",
+            "name": "candy marshmellow",
+            "img": "img/shakes/candy_marshmellow.jpg",
+            "price": 4.5,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s8",
+            "name": "kiwi",
+            "img": "img/shakes/kiwi.jpg",
+            "price": 2.5,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s9",
+            "name": "lime sprite",
+            "img": "img/shakes/lime_sprite.jpg",
+            "price": 3,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s10",
+            "name": "oreo",
+            "img": "img/shakes/oreo.jpg",
+            "price": 3,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s11",
+            "name": "raspberrty whipped cream",
+            "img": "img/shakes/raspebrry_whipped_cream.jpg",
+            "price": 3,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s12",
+            "name": "sahara",
+            "img": "img/shakes/sahara.jpg",
+            "price": 3,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s13",
+            "name": "twix",
+            "img": "img/shakes/twix.jpg",
+            "price": 3.5,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s14",
+            "name": "whipped cream donut",
+            "img": "img/shakes/whipped_cream_donut.jpg",
+            "price": 4.5,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
+        },
+        {
+            "id": "s15",
+            "name": "wild mix",
+            "img": "img/shakes/wild_mix.jpg",
+            "price": 3,
+            "type": "shakes",
+            "ingredients": [
+                "ingredient 1",
+                "ingredient 2",
+                "ingredient 3",
+                "ingredient 4"
+            ]
         }
     ]
 }

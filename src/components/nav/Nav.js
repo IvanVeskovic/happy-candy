@@ -16,10 +16,9 @@ const Nav = () => {
                 </h3>
 
                 <ul className="nav__list">
-                    <ul className="nav__item"><Link to='/'> Home </Link></ul>
-                    <ul className="nav__item"><Link to='/shop'>shop </Link></ul>
-                    <ul className="nav__item">about</ul>
-                    <ul className="nav__item">contact</ul>
+                    <ul className="nav__item"><Link to='/'>Home</Link></ul>
+                    <ul className="nav__item"><Link to='/shop'>shop</Link></ul>
+                    <ul className="nav__item"><Link to='/contact' >contact</Link></ul>
                 </ul>
 
                 <div className="nav__cart" onClick={() => setShowCart(prevValue => !prevValue)}>

@@ -1,0 +1,33 @@
+.description {
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: linear-gradient(to right bottom, $c-blue, $c-pink);
+    transition: height .4s ease;
+    cursor: pointer;
+
+    &__active {
+        height: 100%;
+    }
+
+    &__title {
+        color: $c-white;
+        text-align: center;
+        margin: 1rem;
+        text-transform: capitalize;
+    }
+
+    &__ingredients {
+        margin: 2rem 1rem;
+        color: $c-white;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    &__ingredient {
+        border-bottom: 2px solid $c-white;
+    }
+}

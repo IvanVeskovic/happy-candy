@@ -1,6 +1,7 @@
 @import './styles/abstract';
 @import './styles/base';
 @import './styles/utilities';
+@import './styles/animations';
 
 @import './components/heading/heading';
 @import './components/button/button';
@@ -8,12 +9,17 @@
 @import './components/header/header';
 @import './components/card/card';
 @import './components/contentBox/contentBox';
-@import './components/footer/footer.scss';
+@import './components/footer/footer';
 @import './components/categoryBox/categoryBox';
 @import './components/cart/cart';
 @import './components/breakSection/breakSection';
-@import './components/listAll/listAll';
+@import './components/spinner/spinner';
+@import './components/description/description';
+@import './components/search/search';
+@import './components/message/message';
+@import './components/form/form';
 
 @import './pages/home/home';
 @import './pages/shop/shop';
+@import './pages/contact/contact';
 

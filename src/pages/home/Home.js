@@ -9,7 +9,7 @@ import shakeSvg from '../../img/shake-svg.svg';
 import ContentBox from "../../components/contentBox/ContentBox";
 import { useEffect, useState } from "react";
 import BreakSection from "../../components/breakSection/BreakSection";
-import ListAll from "../../components/listAll/ListAll";
+// import ListAll from "../../components/listAll/ListAll";
 
 const Home = () => {
     const [randomDonuts, setRandomDonuts] = useState([]);
