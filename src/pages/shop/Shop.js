@@ -22,6 +22,8 @@ const Shop = () => {
         const [limit, setLimit] = useState(15);
         // const [showMessage, setShowMessage] = useState(false);
 
+
+
         useEffect(() => {
             const getListForShop = async () => {
                 setIsloading(true);
@@ -92,7 +94,7 @@ const Shop = () => {
                         {
                             limit <= filteredList.length   
                             && 
-                            <Button width="25%" bgColor='#55efc4' text='Show More' classType='btn--second' limit={limit} setLimit={setLimit} />
+                            <Button width="25%" bgColor='#55efc4' text='Show More' classType='btn--second' limit={limit} callbackFunction={() => setLimit(prevValue => prevValue + 15)} />
                         }
                 
             </div>

@@ -13,13 +13,26 @@ import BreakSection from "../../components/breakSection/BreakSection";
 
 const Home = () => {
     const [randomDonuts, setRandomDonuts] = useState([]);
+    const [numberOfRandomDonuts, setNumberOfRandomDonuts] = useState(5);
 
     useEffect(() => {
-        fetch(`http://localhost:8000/products`)
+        const abort = new AbortController();
+        fetch(`http://localhost:8000/products`, {signal: abort.signal})
             .then(res => res.json())
-            .then(data => setRandomDonuts((data.sort(() => 0.5 - Math.random())).slice(0, 5)))
+            .then(data => setRandomDonuts((data.sort(() => 0.5 - Math.random())).slice(0, numberOfRandomDonuts)))
             .catch(err => console.log(err))
-    },[])
+
+            return () => abort.abort();
+    },[numberOfRandomDonuts])
+
+    useEffect(() => {
+        const screenWidth = window.screen.width;
+        if(screenWidth < 600){
+            setNumberOfRandomDonuts(3);
+        } else if (screenWidth < 900) {
+            setNumberOfRandomDonuts(4)
+        }
+    }, [])
 
     return ( 
         <div className="home">

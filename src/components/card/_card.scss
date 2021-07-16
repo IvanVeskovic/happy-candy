@@ -4,13 +4,18 @@
     align-items: center;
     position: relative;
     // width: 25rem;
+    // min-width: 22rem;
     overflow: hidden;
-
     transition: all .2s;
+    // width: 22rem;
 
-    &:hover {
-        // transform: scale(1.05);
-        box-shadow: 0 5px 10px rgba($c-dark, .4);
+    @include respond(tab-land){
+        min-width: 23%;
+    }
+
+    @include respond(phone){
+        min-width: 60%;
+        margin-bottom: 3rem;
     }
 
     &__title {
@@ -18,6 +23,11 @@
         font-size: 2rem;
         margin-top: 2rem;
         text-transform: capitalize;
+        text-align: center;
+
+        @include respond(tab-land){
+            font-size: 1.8rem;
+        }
     }
 
     &__img {

@@ -6,17 +6,23 @@ import Home from './pages/home/Home';
 import Shop from './pages/shop/Shop';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ShopProvider } from './components/ShopContext';
 import Cart from './components/cart/Cart';
 import Contact from './pages/contact/Contact';
+import { useContext } from 'react';
+import { ShopContext } from './components/ShopContext';
+import LogInSignIn from './components/LogInSignIn/LogInSignIn';
 
 function App() {
+  const { showLogInSignIn } = useContext(ShopContext);
+
   return (
-    <ShopProvider>
       <Router>
         <div className="App">
           <Nav />
           <Cart /> 
+          {
+            showLogInSignIn && <LogInSignIn />
+          }
           
           <Switch>
             <Route exact path='/'>
@@ -34,7 +40,6 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </ShopProvider>
   );
 }
 

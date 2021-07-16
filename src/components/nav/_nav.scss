@@ -1,6 +1,9 @@
 .nav {
     padding: 1.5rem 0;
 
+    @include respond(tab-land) {
+        padding: 1rem;
+    }
 
     .row {
         display: flex;
@@ -52,7 +55,7 @@
             font-size: 3rem;
             color: $c-pink;
             position: relative;
-            margin-left: 2rem;
+            margin-left: 1rem;
             padding-right: 1rem;
             cursor: pointer;
 

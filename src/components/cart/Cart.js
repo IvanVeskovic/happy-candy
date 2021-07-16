@@ -1,10 +1,10 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import Button from '../button/Button';
 
 import {ShopContext} from '../ShopContext';
 
 const Cart = () => {
-    const [cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity] = useContext(ShopContext);
+    const {cart, showCart, setShowCart, handleRemoveFromCart, handleChangeQuantity} = useContext(ShopContext);
 
     const handleTotalPrice = () => {
         if(cart.length > 0) {

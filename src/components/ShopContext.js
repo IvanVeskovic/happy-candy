@@ -5,6 +5,8 @@ export const ShopContext = createContext();
 export const ShopProvider = (props) => {
     const [cart, setCart] = useState([]);
     const [showCart, setShowCart] = useState(false);
+    const [showLogInSignIn, setShowLogInSignIn] = useState(false);
+    const [logIn, setLogIn] = useState(true)
 
     const handleAddToCartUnique = (item) => {
         if(!cart.some(el => el.id === item.id)){
@@ -20,7 +22,6 @@ export const ShopProvider = (props) => {
         const newObj = cart.find(el => el.id === id);
         newObj.quantity = value;
         const newArr = cart.filter(el => el.id !== id ? el : newObj);
-
         setCart(newArr);
     }
 
@@ -48,7 +49,7 @@ export const ShopProvider = (props) => {
     }
 
     return(
-        <ShopContext.Provider value={[cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity]}>
+        <ShopContext.Provider value={{cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity, showLogInSignIn, setShowLogInSignIn, logIn, setLogIn}}>
             {props.children}
         </ShopContext.Provider>
     )

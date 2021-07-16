@@ -8,6 +8,10 @@
     position: relative;
     z-index: 3;
 
+    @include respond(tab-land){
+        font-size: 1.8rem;
+    }
+
     &:focus {
         outline: none;
     }
@@ -33,9 +37,22 @@
         font-size: 1.6rem;
         margin-top: auto;
 
+        @include respond(tab-land){
+            font-size: 1.4rem;
+        }
+
         &:hover {
             background-color: $c-pink;
         }
+    }
+
+    &--third {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        font-weight: 700;
+        background-color: $c-blue;
+        border-radius: 5px;
+        color: $c-white;
     }
 
     &__link {

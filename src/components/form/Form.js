@@ -1,14 +1,10 @@
+import FormInput from "../formInput/FormInput";
+
 const Form = () => {
     return ( 
         <form className='form my-lg'>
-            <div className="form__controll">
-                <input type="text" className='form__input'/>
-                <label htmlFor="">Enter Name</label>
-            </div>
-            <div className="form__controll">
-                <input type="email" className='form__input' required/>
-                <label htmlFor="">Enter Email</label>
-            </div>
+            <FormInput type='text' text='Enter Name' />
+            <FormInput type='email' text='Enter Email' />
             <div className="form__controll">
                 <textarea name="message" className='form__textarea' placeholder='Enter Message'></textarea>
             </div>

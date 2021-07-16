@@ -1,11 +1,15 @@
 .shop {
     text-align: center;
+    
     &__content {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 3rem;
+        grid-gap: 2rem;
+        justify-content: space-between;
+        justify-items: center;
         align-items: center;
         transition: all .5s;
+        padding: 1rem;
     }
 
     &__category {

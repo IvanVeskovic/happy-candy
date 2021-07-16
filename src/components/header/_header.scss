@@ -16,6 +16,10 @@
         align-items: flex-start;
         justify-content: center;
         color: $c-white;
+
+        @include respond (tab-land) {
+            margin-left: 3rem;
+        }
     }
 
     &__heading {
