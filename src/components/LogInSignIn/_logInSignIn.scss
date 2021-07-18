@@ -40,13 +40,23 @@
         cursor: pointer;
     }
 
-    // &__buttons {
-    //     display: flex;
-    //     align-items: stretch;
-    //     // justify-content: stretch;
+    &__buttons button{
+        font-size: 1.3rem;
+    }
 
-    //     &:first-child{
-    //         height: 100%;
-    //     }
-    // }
+    &__info {
+        color: $c-white;
+        font-size: 1.2rem;
+        text-align: center;
+
+        &--link {
+            color: $c-blue;
+            cursor: pointer;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-bottom: 1px solid $c-blue;
+            }
+        }
+    }
 }

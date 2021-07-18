@@ -6,7 +6,8 @@ export const ShopProvider = (props) => {
     const [cart, setCart] = useState([]);
     const [showCart, setShowCart] = useState(false);
     const [showLogInSignIn, setShowLogInSignIn] = useState(false);
-    const [logIn, setLogIn] = useState(true)
+    const [logIn, setLogIn] = useState(true);
+    const [user, setUser] = useState({});
 
     const handleAddToCartUnique = (item) => {
         if(!cart.some(el => el.id === item.id)){
@@ -49,7 +50,7 @@ export const ShopProvider = (props) => {
     }
 
     return(
-        <ShopContext.Provider value={{cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity, showLogInSignIn, setShowLogInSignIn, logIn, setLogIn}}>
+        <ShopContext.Provider value={{cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity, showLogInSignIn, setShowLogInSignIn, logIn, setLogIn, user, setUser}}>
             {props.children}
         </ShopContext.Provider>
     )

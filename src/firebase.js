@@ -1,6 +1,6 @@
 import firebase from "firebase";
 
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDkzYOtTwmiYhGr7RlsQ8HATzvz2MESFiU",
     authDomain: "donut-shop-be503.firebaseapp.com",
     projectId: "donut-shop-be503",
@@ -10,6 +10,8 @@ var firebaseConfig = {
     measurementId: "G-6EN21TLB18"
   };
 
-  firebase.initalizeApp(firebaseConfig);
 
-  export const auth = firebase.auth();
+  firebase.initializeApp(firebaseConfig);
+
+  
+  export const firebaseAuth = firebase.auth();
