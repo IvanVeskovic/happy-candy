@@ -1,9 +1,23 @@
 .message {
-    font-size: 2.5rem;
-    padding: 1rem;
-    // background-color: $c-blue;
-    max-width: 500px;
-    margin: 0 auto;
-    color: $c-blue;
-    text-shadow: 0 2px 4px 10px $c-dark;
+    font-size: 1.6rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: $c-white;
+    width: 100%;
+    margin: 1rem 0;    
+
+    &--info {
+       background-color: $c-white;
+       color: $c-dark; 
+    }
+
+    &--good {
+        background-color: $c-good;
+        color: $c-white;
+    }
+
+    &--danger {
+        background-color: $c-danger;
+        color: $c-white;
+    }
 }

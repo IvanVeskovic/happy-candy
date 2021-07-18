@@ -1,6 +1,7 @@
-const Message = ({text}) => {
+const Message = ({text, type}) => {
+
     return ( 
-        <div className='message'>
+        <div className={`message message--${type}`}>
             {text}
         </div>
      );

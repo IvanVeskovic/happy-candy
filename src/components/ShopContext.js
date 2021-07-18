@@ -9,6 +9,7 @@ export const ShopProvider = (props) => {
     const [logIn, setLogIn] = useState(true);
     const [user, setUser] = useState({});
 
+
     const handleAddToCartUnique = (item) => {
         if(!cart.some(el => el.id === item.id)){
             setCart(prevValue => [...prevValue, {...item, "quantity" : 1}])
