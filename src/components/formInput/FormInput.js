@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const FormInput = ({placeholder = 'Holder', text, type, callbackFunction}) => {
+const FormInput = ({placeholder = 'Holder', text, type, callbackFunction, labelType}) => {
     const [value, setValue] = useState('');
 
     const handleValue = (e) => {
@@ -13,9 +13,9 @@ const FormInput = ({placeholder = 'Holder', text, type, callbackFunction}) => {
 
 
     return ( 
-        <div className="form__controll">
-            <input type={type} className={`form__input ${value.length > 0 ? 'form__input--active' : ''}`} placeholder={placeholder} onChange={(e) => handleValue(e)} />
-            <label htmlFor="">{text}</label>
+        <div className="controll">
+            <input type={type} className={`controll__input ${value.length > 0 ? 'controll__input--active' : ''}`} placeholder={placeholder} onChange={(e) => handleValue(e)} />
+            <label htmlFor="" className={`${labelType === 'light' ? 'light' : 'dark'}`} >{text}</label>
         </div>
      );
 }

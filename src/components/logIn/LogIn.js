@@ -4,8 +4,8 @@ const LogIn = ({setEmail, setPassword, handleLogIn}) => {
 
     return ( 
         <form className='form' onSubmit={(e) => handleLogIn(e)}>
-            <FormInput type='email' text='Enter Email' callbackFunction={setEmail} />
-            <FormInput type='password' text='Enter Password' callbackFunction={setPassword} />
+            <FormInput type='email' text='Enter Email' callbackFunction={setEmail} labelType='light' />
+            <FormInput type='password' text='Enter Password' callbackFunction={setPassword} labelType='light' />
         </form>
      );
 }

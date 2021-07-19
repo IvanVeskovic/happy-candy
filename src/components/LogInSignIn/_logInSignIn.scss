@@ -17,6 +17,10 @@
         border-radius: 10px;
         padding: 2rem;
         position: relative;
+
+        // label {
+        //     color: $c-white ;
+        // }
     }
 
     &__heading {
@@ -25,10 +29,6 @@
         font-size: 3.5rem;
         text-align: center;
         margin-bottom: 3rem;
-    }
-
-    .form label {
-        color: $c-light;
     }
 
     &__close {

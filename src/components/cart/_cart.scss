@@ -123,3 +123,40 @@
         }
     }
 }
+
+.delivery {
+
+    border-bottom: 2px solid $c-pink;
+    border-top: 2px solid $c-pink;
+    margin-bottom: 2rem;
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-style: italic;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        
+        i {
+            color: $c-blue;
+            cursor: pointer;
+
+            &:hover {
+                color: $c-pink;
+            }
+        }
+    }
+
+    &__body {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s ease-in-out;
+
+        &--active {
+            max-height: 40rem;
+            padding-top: 2rem;
+        }
+    }
+}
