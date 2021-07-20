@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { db } from '../../firebase';
 import Button from '../button/Button';
 import FormInput from '../formInput/FormInput';
 import Message from '../message/Message';
@@ -20,14 +21,18 @@ const Cart = () => {
     const history = useHistory();
 
     const handleOrder = () => {
-            return {
+        // Get data and send it to firestore.
+            db.collection('orders').add({
                 userEmail: user.email,
                 name: name,
                 street: street,
                 phoneNumber: phoneNumber,
                 orderMessage: orderMessage,
-                orderCart: cart
-            }
+                orderCart: cart,
+                totalPrice: handleTotalPrice(),
+                isShipped: false,
+                orderDate: new Date()
+            })
     }
 
     const handleTotalPrice = () => {
@@ -36,6 +41,7 @@ const Cart = () => {
         }
     }
 
+    // Go to shop page
     const handleShopNow = () => {
         history.push('/shop');
         setShowCart(false);
@@ -44,6 +50,7 @@ const Cart = () => {
     const handleSubmit = e => {
         e.preventDefault();
 
+        
         if(Object.keys(user).length < 1){
             setShowMessage({text: 'You need to be logged in!', type: 'danger'})
             setTimeout(() => {
@@ -59,12 +66,13 @@ const Cart = () => {
         } else {
             setShowMessage({text: 'Order completed, We will contact you soon. You can make another fantastic order', type: 'good'})
             setTimeout(() => {
+                // Trigger sending data to firestore
+                handleOrder();
                 // Clearing all and restarting order
                 setShowMessage({text: '', type: ''});
                 setCart([]) 
                 setShowDelivery(false);
             }, 5000);
-            console.log(handleOrder());
         }
     }
 
@@ -125,9 +133,6 @@ const Cart = () => {
                             <Message text='We are currently delivering only on the territory of Belgrade' type='info' className='mb-lg' />
                         </div>
                     </div>
-
-{/* 
-                    <button type='submit' className='btn btn--second' callbackFunction={(e) => handleSubmit(e)}>Submit</button> */}
 
                     <Button classType='btn--second' text='Submit Order' callbackFunction={(e) => handleSubmit(e)} />
                 </form>

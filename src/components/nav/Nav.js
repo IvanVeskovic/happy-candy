@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import { ShopContext } from '../ShopContext';
 import Button from "../button/Button";
@@ -8,7 +8,6 @@ import Button from "../button/Button";
 const Nav = () => {
 
     const {cart, setShowCart, setShowLogInSignIn, user, setUser} = useContext(ShopContext);
-
 
     return ( 
         <nav className='nav'>
@@ -22,12 +21,14 @@ const Nav = () => {
                     <ul className="nav__item"><Link to='/shop'>shop</Link></ul>
                     <ul className="nav__item"><Link to='/contact' >contact</Link></ul>
                 </ul>
+
+                {/* Render elements based on is user logged or not */}
                 {   Object.keys(user).length < 1
                     ?
                     <Button text='Log In' classType='btn--third' callbackFunction={() => setShowLogInSignIn(true)} />
                     :
                     <div className='nav__user'>
-                        <i className="fas fa-user"></i>
+                        <i className="fas fa-user" ></i>
                         <div className="nav__user--email">
                             {user && user.email}
                         </div>

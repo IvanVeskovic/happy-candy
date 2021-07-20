@@ -1,13 +1,28 @@
 import React, { useState, useEffect, createContext } from 'react';
+import { db } from '../firebase';
 
 export const ShopContext = createContext();
 
 export const ShopProvider = (props) => {
     const [cart, setCart] = useState([]);
+
     const [showCart, setShowCart] = useState(false);
     const [showLogInSignIn, setShowLogInSignIn] = useState(false);
     const [logIn, setLogIn] = useState(true);
+
     const [user, setUser] = useState({});
+    const [myOrders, setMyOrders] = useState([]);
+
+
+    // Finish this..... 
+    const handleMyOrders = () => {
+        db.collection('orders').where("userEmail", "==", user.email).get().then(snapshot => {
+            snapshot.docs.forEach(doc => {
+                    console.log(doc.data());
+                    setMyOrders([...myOrders, doc.data()]);
+            })
+        })
+    }
 
 
     const handleAddToCartUnique = (item) => {
@@ -51,7 +66,7 @@ export const ShopProvider = (props) => {
     }
 
     return(
-        <ShopContext.Provider value={{cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity, showLogInSignIn, setShowLogInSignIn, logIn, setLogIn, user, setUser}}>
+        <ShopContext.Provider value={{cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity, showLogInSignIn, setShowLogInSignIn, logIn, setLogIn, user, setUser, handleMyOrders}}>
             {props.children}
         </ShopContext.Provider>
     )
