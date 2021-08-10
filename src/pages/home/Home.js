@@ -12,7 +12,7 @@ import BreakSection from "../../components/breakSection/BreakSection";
 
 const Home = () => {
     const [randomDonuts, setRandomDonuts] = useState([]);
-    const [numberOfRandomDonuts, setNumberOfRandomDonuts] = useState(5);
+    const [numberOfRandomDonuts, setNumberOfRandomDonuts] = useState(4);
 
     useEffect(() => {
         const abort = new AbortController();
@@ -24,40 +24,45 @@ const Home = () => {
             return () => abort.abort();
     },[numberOfRandomDonuts])
 
-    useEffect(() => {
-        const screenWidth = window.screen.width;
-        if(screenWidth < 600){
-            setNumberOfRandomDonuts(3);
-        } else if (screenWidth < 900) {
-            setNumberOfRandomDonuts(4)
-        }
-    }, [])
+    // useEffect(() => {
+    //     const screenWidth = window.screen.width;
+    //     if(screenWidth < 600){
+    //         setNumberOfRandomDonuts(3);
+    //     } else if (screenWidth < 900) {
+    //         setNumberOfRandomDonuts(4)
+    //     }
+    // }, [])
 
     return ( 
         <div className="home">
             <Header />
-            <Heading title='Random donuts for you' />
 
-            <div className="row">
-                <div className="home__wraper">
-                {
-                    randomDonuts.map(donut => (
-                        <Card title={donut.name} img={donut.img} width='18%' key={donut.id} item={donut} price={donut.price} />
-                    ))
-                }
+            <section className="my-lg">
+                <Heading title='Random product for you' type='primary' className='mb-lg' />
+                <div className="row">
+                    <div className="home__wraper">
+                    {
+                        randomDonuts.map(donut => (
+                            <Card title={donut.name} img={donut.img} key={donut.id} item={donut} price={donut.price} />
+                        ))
+                    }
+                    </div>
                 </div>
-            </div>
+            </section>
+            
 
             <BreakSection />
 
-            <Heading title='From us' />
-            <div className="row">
-                <div className="home__wraper">
-                    <ContentBox title='Donuts' img={donutSvg} text='Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum' />
-                    <ContentBox title='Cakes' img={cakeSvg} text='Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Syd' />
-                    <ContentBox title='Shakes' img={shakeSvg} text='Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin ' />
+            <section className="my-lg">
+                <Heading title='From us' type='primary' className='mb-lg' />
+                <div className="row">
+                    <div className="home__wraper--three-cols">
+                        <ContentBox title='Donuts' img={donutSvg} text='Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum' />
+                        <ContentBox title='Cakes' img={cakeSvg} text='Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Syd' />
+                        <ContentBox title='Shakes' img={shakeSvg} text='Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin ' />
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
      );
 }

@@ -1,5 +1,6 @@
 .shop {
     text-align: center;
+    transition: all .5s;
     
     &__content {
         display: grid;
@@ -10,17 +11,26 @@
         align-items: center;
         transition: all .5s;
         padding: 1rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-gap: 4rem;
     }
 
     &__category {
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
         align-items: center;
         justify-content: space-around;
         transition: all .5s;
 
+        @include respond(phone-lg){
+            grid-template-columns: 1fr 1fr;
+        }
+
     }
 
-    transition: all .5s;
 
 }

@@ -30,8 +30,9 @@ const Cart = () => {
                 orderMessage: orderMessage,
                 orderCart: cart,
                 totalPrice: handleTotalPrice(),
-                isShipped: false,
-                orderDate: new Date()
+                status: 'Order Sent',
+                orderDate: new Date(),
+                orderId: Date.now()
             })
     }
 

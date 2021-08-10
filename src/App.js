@@ -11,9 +11,10 @@ import Contact from './pages/contact/Contact';
 import { useContext } from 'react';
 import { ShopContext } from './components/ShopContext';
 import LogInSignIn from './components/LogInSignIn/LogInSignIn';
+import MyOrders from './components/myOrders/MyOrders';
 
 function App() {
-  const { showLogInSignIn } = useContext(ShopContext);
+  const { showLogInSignIn, showMyOrders } = useContext(ShopContext);
 
   return (
       <Router>
@@ -23,7 +24,9 @@ function App() {
           {
             showLogInSignIn && <LogInSignIn />
           }
-          
+          {
+            showMyOrders && <MyOrders />
+          }
           <Switch>
             <Route exact path='/'>
               <Home />

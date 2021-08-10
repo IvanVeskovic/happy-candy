@@ -6,7 +6,7 @@
     @include respond(phone-lg){
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center;        
     }
 
     &__content{
@@ -18,6 +18,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            & > * {
+                margin-bottom: 1rem;
+            }
         }
     }
 

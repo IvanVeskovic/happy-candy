@@ -1,17 +1,11 @@
-import { ShopContext } from "../ShopContext";
-import { useContext } from "react";
-
-const Popup = (props) => {
-
-    const {setShowLogInSignIn} = useContext(ShopContext);
-
+const Popup = ({children, closeFunction}) => {
     return ( 
         <div className='popup'>
             <div className="popup__box">
-                <div className="popup__close" onClick={() => setShowLogInSignIn(false)}>
+                <div className="popup__close" onClick={() => closeFunction(false)}>
                     <i className="fas fa-times-circle"></i>
                 </div>
-                {props.children}
+                {children}
             </div>
         </div>
      );

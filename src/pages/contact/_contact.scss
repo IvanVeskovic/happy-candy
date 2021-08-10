@@ -9,14 +9,17 @@
     &__content {
         display: flex;
         justify-content: space-between;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        
     }
 
     &__info {
-        width: 20%;
-        margin-top: 3rem;
+        min-width: 25%;
         font-size: 1.8rem;
         color: $c-white;
         line-height: 4rem;
+        margin-right: 5rem;
 
         &__heading {
             font-size: 3rem;
@@ -33,9 +36,6 @@
             font-size: 2.5rem;
         }
     }
-
-
-
 
     .form {
         flex: 1;

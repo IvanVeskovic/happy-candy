@@ -1,0 +1,27 @@
+.myOrder {
+    color: $c-dark;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    background: rgba($c-white, .7);
+    margin: 1rem;
+    // width: 85%;
+    border-radius: 5px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    &__box {
+        // background: $c-white;
+        display: flex;
+        align-items: center;
+        min-height: 4rem;
+        font-size: 1.7rem;
+    }
+
+    i {
+        color: $c-dark;
+        font-size: 2.5rem;
+        margin-right: 1rem;
+        min-width: 3rem;
+    }
+}

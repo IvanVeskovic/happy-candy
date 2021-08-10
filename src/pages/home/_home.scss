@@ -1,16 +1,43 @@
 .home {
     &__wraper {
-        display: flex;
+        // display: flex;
         justify-content: space-between;
         margin: 5rem 0; 
+        display: grid;
+        // grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        grid-gap: 4rem;
 
+        .card {
+            @include respond(phone){
+                width: 80%;
+            }
+        }
         
+        &--three-cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 4rem;
+
+            @include respond(phone-lg){
+                grid-template-columns: 1fr;
+                width: 100%;
+                padding: 0 3rem;
+            }
+        }
+
         @include respond(tab-land){
             padding: 2rem;
         }
         
         @include respond(tab-port){
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
             margin: 3rem 0;
+        }
+
+        @include respond(phone-lg){
+            grid-template-columns: 1fr 1fr;
+            // padding: 0 3rem;
         }
         
         @include respond(phone){
@@ -19,6 +46,7 @@
             width: 100%;
             align-items: center;
             justify-items: center;
+            padding: 0 8rem;
         }
     }
 }

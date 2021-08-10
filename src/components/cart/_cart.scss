@@ -12,12 +12,20 @@
     transition: all .2s ;
     overflow-y: scroll;
 
+    @include respond(phone-lg) {
+        min-width: 0;
+    }
+
     &::-webkit-scrollbar {
         opacity: 0;
     }
 
     &--show {
         max-width: 50rem;
+
+        @include respond(phone-lg) {
+            min-width: 100vw;
+        }
     }
 
     &__close {

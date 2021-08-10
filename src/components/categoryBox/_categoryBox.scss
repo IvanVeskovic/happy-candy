@@ -3,13 +3,16 @@
 
     &__box {
         height: 20rem;
-        width: 20%;
         position: relative;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         display: flex;
         cursor: pointer;
+
+        @include respond(phone-lg){
+            height: 15rem;
+        }
     }
 
     

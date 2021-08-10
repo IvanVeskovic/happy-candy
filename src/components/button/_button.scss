@@ -8,6 +8,10 @@
     position: relative;
     z-index: 3;
 
+    @include respond(phone-lg) {
+        font-size: 1.8rem;
+    }
+
     @include respond(tab-land){
         font-size: 1.8rem;
     }
@@ -53,6 +57,10 @@
         background-color: $c-blue;
         border-radius: 5px;
         color: $c-white;
+
+        @include respond(phone-lg) {
+            font-size: 1.6rem;
+        }
     }
 
     &__link {

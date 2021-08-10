@@ -5,24 +5,33 @@ export const ShopContext = createContext();
 
 export const ShopProvider = (props) => {
     const [cart, setCart] = useState([]);
-
     const [showCart, setShowCart] = useState(false);
     const [showLogInSignIn, setShowLogInSignIn] = useState(false);
     const [logIn, setLogIn] = useState(true);
-
+    const [showMyOrders, setShowMyOrders] = useState(false);
     const [user, setUser] = useState({});
     const [myOrders, setMyOrders] = useState([]);
 
-
-    // Finish this..... 
     const handleMyOrders = () => {
-        db.collection('orders').where("userEmail", "==", user.email).get().then(snapshot => {
-            snapshot.docs.forEach(doc => {
-                    console.log(doc.data());
-                    setMyOrders([...myOrders, doc.data()]);
+            let temp = [];
+            db.collection('orders').where("userEmail", "==", user.email).get().then(snapshot => {
+                snapshot.docs.forEach(doc => {
+                        temp.push(doc.data());
+                    })
+               
             })
-        })
+            setMyOrders(temp);
+            console.log(myOrders);
     }
+
+    useEffect(() => {
+        if(Object.keys(user).length > 0) {
+            handleMyOrders();
+            setShowLogInSignIn(false);
+        } else {
+            setMyOrders([]);
+        }
+    }, [user])
 
 
     const handleAddToCartUnique = (item) => {
@@ -66,7 +75,7 @@ export const ShopProvider = (props) => {
     }
 
     return(
-        <ShopContext.Provider value={{cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity, showLogInSignIn, setShowLogInSignIn, logIn, setLogIn, user, setUser, handleMyOrders}}>
+        <ShopContext.Provider value={{cart, setCart, showCart, setShowCart, handleAddToCartUnique, handleRemoveFromCart, handleChangeQuantity, showLogInSignIn, setShowLogInSignIn, logIn, setLogIn, user, setUser, showMyOrders, setShowMyOrders, setMyOrders, handleMyOrders, myOrders}}>
             {props.children}
         </ShopContext.Provider>
     )

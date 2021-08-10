@@ -9,7 +9,15 @@
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
+    overflow-y: scroll;
     justify-content: center;
+    
+    &::-webkit-scrollbar {
+        display: none;
+        -moz-scrollbar-width: none;
+    }
+
+
     
     &__box {
         background: $c-dark;
@@ -17,10 +25,13 @@
         border-radius: 10px;
         padding: 2rem;
         position: relative;
+        max-height: 95vh;
+        overflow-y: scroll;
 
-        // label {
-        //     color: $c-white ;
-        // }
+        &::-webkit-scrollbar {
+            display: none;
+            -moz-scrollbar-width: none;
+        }
     }
 
     &__close {

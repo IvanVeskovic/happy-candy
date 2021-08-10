@@ -1,6 +1,6 @@
-const Heading = ({title}) => {
+const Heading = ({title, type, className}) => {
     return ( 
-        <h2 className="heading">
+        <h2 className={`heading ${type ? `heading--${type}` : ''} ${className}`}>
             {title}
         </h2>
      );

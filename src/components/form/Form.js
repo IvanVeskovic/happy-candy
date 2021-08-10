@@ -2,7 +2,7 @@ import FormInput from "../formInput/FormInput";
 
 const Form = () => {
     return ( 
-        <form className='form my-lg'>
+        <form className='form'>
             <FormInput type='text' text='Enter Name' />
             <FormInput type='email' text='Enter Email' />
             <div className="form__controll">

@@ -1,5 +1,12 @@
 .nav {
     padding: 1.5rem 0;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // z-index: 50;
+    // background: $c-white;
+    // width: 100%;
+    // box-shadow: 0 5px 10px rgba($c-dark, .2);
 
     @include respond(tab-land) {
         padding: 1rem;
@@ -11,9 +18,47 @@
         align-items: center;
     }
 
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        @include respond(phone-lg) {
+            height: 0;
+            display: none;
+        }
+        
+        &--active{
+            @include respond(phone-lg) {
+    
+                height: 80%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right bottom, $c-blue, $c-pink);
+                flex-direction: column;
+                z-index: 100;
+                justify-content: center;
+                display: flex;
+                overflow: hidden;
+                
+                & > *:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
+        }
+       
+        }
+    }
+
     &__logo {
         font-family: $font-sansita;
-        font-size: 4rem;
+        font-size: 3.5rem;
+
+        @include respond(phone-lg) {
+            font-size: 2.5rem;
+        }
     }
 
     &__list {
@@ -21,6 +66,15 @@
         display: flex;
         margin-left: auto;
         align-items: center;
+
+        @include respond(phone-lg) {
+            margin: 0;
+            flex-direction: column;
+
+            & > *:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
     }   
 
     &__item {
@@ -30,6 +84,11 @@
         font-size: 2rem;
         cursor: pointer;
         backface-visibility: hidden;
+
+        @include respond(phone-lg) {
+            font-size: 2.2rem;
+            color: $c-white;
+        }
         
         &:hover.nav__item::after {
             width: 100%;
@@ -76,7 +135,7 @@
             padding: .5rem 1rem;
             font-size: 1.2rem;
             color: $c-white;
-            bottom: -4rem;
+            bottom: -6rem;
             border-radius: 3px;
             opacity: 0;
             visibility: hidden;
@@ -126,4 +185,62 @@
                 color: rgba($c-pink, .8);
             }
     }
+}
+
+.menu {
+    width: 40px;
+    height: 35px;
+    position: relative;
+    // margin: 50px auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: none;
+    z-index: 101;
+
+    @include respond(phone-lg) {
+        display: block;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: $c-dark;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+      }
+
+      span:nth-child(1) {
+        top: 0px;
+      }
+      
+      span:nth-child(2) {
+        top: 14px;
+      }
+      
+      span:nth-child(3) {
+        top: 28px;
+      }
+
+      
+    &.open span:nth-child(1) {
+    top: 18px;
+    transform: rotate(135deg);
+  }
+  
+  &.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  &.open span:nth-child(3) {
+    top: 18px;
+    transform: rotate(-135deg);
+  }
+      
 }

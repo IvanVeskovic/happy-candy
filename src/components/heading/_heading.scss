@@ -1,19 +1,27 @@
 .heading {
     text-align: center;
-    font-family: $font-sansita;
-    font-size: 4.5rem;
-    margin: 2rem 0;
 
-    @include respond(tab-land){
-        font-size: 4rem;
-    }
+    &--primary {
+        font-family: $font-sansita;
+        font-size: 4.5rem;
 
-    &::after {
-        content: '';
-        height: 3px;
-        width: 170px;
-        display: block;
-        background-color: $c-blue;
-        margin: 2rem auto;
+        @include respond(tab-land){
+            font-size: 4rem;
+        }
+    
+        &::after {
+            content: '';
+            height: 3px;
+            width: 170px;
+            display: block;
+            background-color: $c-blue;
+            margin: 2rem auto;
+        }
     }
+    
+    &--secondary {
+        color: $c-white;
+        font-size: 2.5rem;
+    }
+    
 }

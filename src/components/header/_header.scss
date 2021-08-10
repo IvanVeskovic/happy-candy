@@ -3,7 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 70vh;
+    height: 95vh;
 
     .row {
         height: 100%;
@@ -27,11 +27,21 @@
         font-family: $font-sansita;
         line-height: 6.5rem;
         margin-bottom: 2rem;
+
+        @include respond(phone-lg) {
+            font-size: 5rem;
+            line-height: 5.5rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &__text {
         margin-bottom: 2rem;
         font-size: 2rem;
         font-style: italic;
+
+        @include respond(phone-lg) {
+            font-size: 1.7rem;
+        }
     }
 }

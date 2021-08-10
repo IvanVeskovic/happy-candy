@@ -68,7 +68,7 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <Heading title='Shop All Day' />
+                <Heading title='Shop All Day' type='primary' className='my-lg' />
                 <div className="row mt-lg mb-sm">
                 <Search search={search} handleSearch={handleSearch} />
                         {

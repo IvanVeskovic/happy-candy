@@ -4,7 +4,7 @@ import Heading from "../../components/heading/Heading";
 const Contact = () => {
     return ( 
         <div className='contact'>
-                <Heading title='Lets get in touch' />   
+                <Heading title='Lets get in touch' type='primary' />   
                 <div className="row">
                     <div className="contact__content">
                         <div className="contact__info">

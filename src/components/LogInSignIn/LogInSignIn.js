@@ -1,12 +1,10 @@
 import { useContext, useState } from "react";
-import LogIn from "../logIn/LogIn";
 import { ShopContext } from "../ShopContext";
+import { auth, googleProvider } from "../../firebase";
+import LogIn from "../logIn/LogIn";
 import SignIn from "../signIn/SignIn";
 import Button from "../button/Button";
-import { auth, googleProvider } from "../../firebase";
 import Message from "../message/Message";
-
-
 import Popup from "../popup/Popup";
 
 const LogInSignIn = () => {
@@ -14,7 +12,6 @@ const LogInSignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [repeatPassword, setRepeatPassword] = useState('');
-
     const [message, setMessage] = useState('')
 
 
@@ -69,7 +66,7 @@ const LogInSignIn = () => {
 
     return ( 
         <div>
-                <Popup>
+                <Popup closeFunction={setShowLogInSignIn}>
                     <h2 className='log__heading'>
                         {logIn ? 'Log In' : 'Sign In'}
                     </h2>
